@@ -1,6 +1,10 @@
 "use strict";
-console.log('Hello mate');
-var logger = function () {
-    console.log('code');
-};
-logger();
+Object.defineProperty(exports, "__esModule", { value: true });
+var CharactersCollection_1 = require("./CharactersCollection");
+var Sorter_1 = require("./Sorter");
+// const numbersCollectionInstance = new NumbersCollection([4, -1, -56, 123, 22, 51]);
+// console.log(numbersCollectionInstance.data);
+var charactersCollectionInstance = new CharactersCollection_1.CharactersCollection('Xaaa');
+var toSort = new Sorter_1.Sorter(charactersCollectionInstance);
+toSort.sort();
+console.log(toSort.collection);
